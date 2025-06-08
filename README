@@ -1,0 +1,48 @@
+WASH(1)                    User Commands                    WASH(1)
+
+NAME
+       wash - A simple shell implementation
+
+SYNOPSIS
+       wash [-h]
+
+DESCRIPTION
+       wash is a simple shell implementation that supports basic shell
+       functionality including built-in and external commands
+
+BUILT-IN COMMANDS
+       exit    Exit the shell
+
+       echo    Print arguments to console
+              Usage: echo [some text]
+
+       pwd     Print current working directory
+              Usage: pwd
+
+       cd      Change the current working directory
+              Usage: cd [dir]
+              If no directory is specified, changes to home directory
+
+       setpath Set the PATH for command lookup
+              Usage: setpath dir [dir] ... [dir]
+              Requires at least one directory argument
+              Initial PATH contains only /bin
+
+       help    Show this help message
+              Usage: help
+
+OPTIONS
+       -h     Display help message and exit
+
+EXAMPLES
+       $ wash -h
+              Display help message and exit
+
+       $ echo Hello World
+              Print "Hello World" to console
+
+       $ cd /tmp
+              Change to /tmp directory
+
+       $ setpath /bin /usr/bin
+              Set PATH to /bin and /usr/bin
